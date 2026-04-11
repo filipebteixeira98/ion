@@ -1,0 +1,39 @@
+# Binary / Executables
+main
+*.out
+*.exe
+*.app
+
+# Object Files and Libraries
+*.o
+*.obj
+*.so
+*.a
+*.lib
+*.dll
+*.dylib
+
+# Build Directories
+build/
+bin/
+dist/
+
+# Debugging Symbols
+*.dSYM/
+*.pdb
+*.ilk
+
+# Dependency tracking (if using Make)
+.deps/
+*.d
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
