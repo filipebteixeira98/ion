@@ -3,9 +3,24 @@
 
 int main() {
   initscr();
-  printw("Hello, World!\n");
+  raw();
+  keypad(stdscr, TRUE);
+  noecho();
+
+  int row, col;
+  getmaxyx(stdscr, row, col);
+
+  mvprintw(row - 1, 0, "NORMAL");
+  move(0, 0);
+
+  int ch = getch();
+  
+  while (ch != 'q') {
+    addch(ch);
+    ch = getch();
+  }
+
   refresh();
-  getch();
   endwin();
 
   return 0;
