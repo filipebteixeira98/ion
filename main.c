@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <ncurses.h>
 
+#define ctrl(x) ((x) & 0x1f)
+
 int main() {
   initscr();
   raw();
@@ -16,7 +18,7 @@ int main() {
   int ch = getch();
   addch(ch);
 
-  while (ch != 'q') {
+  while (ch != ctrl('q')) {
     ch = getch();
     if (ch == 263) {
       int x, y;
